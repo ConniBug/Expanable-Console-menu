@@ -35,8 +35,8 @@ while running:
 
     menu = ['Cards', 'test']
 
-    card1 = ["Title", "Body"]
-    card2 = ["Title", "Body"]
+    card1 = ["Card 1 Menu", "Body"]
+    card2 = ["Card 2 Menu", "Body"]
     cardsSubMenu = [card1, card2]
 
     testSubMenu = ['1', '2']
@@ -44,19 +44,18 @@ while running:
 
     displayMenu(menu)
     print(ScaleTextSides("", ' ', 20, True))
-    for e in range(0, len(menuListActive[int(menuActive)])):
-        print("Test1: i: " + str(e))
+    for e in range(0, int( len(menuListActive[ int(menuActive) ])[int(subMenuActive)] )    ):
+        #print("Test1: i: " + str(e))
         if(menuActive != 0):
-            for i in range(0, len(((menuListActive[int(menuActive)])[int(subMenuActive)] ))):
-                print("Test1: i: " + i)
+            for i in range(0, len(((menuListActive[int(menuActive)])  [int(subMenuActive)] ))):
+                #print("Test1: i: " + str(i))
                 print("Yeet")
                 print(ScaleTextSides(str(i+1)+ ": " + ((menuListActive[int(menuActive)])[int(subMenuActive)] )[i], ' ', 20, True))
         else:
             print(ScaleTextSides(str(e+1)+ ": " + (menuListActive[int(menuActive)])[e], ' ', 20, True))
         
     if(menuActive == 0):
-        menuActive = input(": ")
-        
-    if(subMenuActive == 0):
-        subMenuActive = input(menuListActive[int(menuActive)])
+        menuActive = int(input(": "))
+    elif(subMenuActive == 0):
+        subMenuActive = int(input(menuListActive[int(menuActive)]))
         
