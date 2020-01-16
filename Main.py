@@ -1,3 +1,4 @@
+debug = false
 
 #Offset values
 Title = 0
@@ -72,4 +73,7 @@ while running:
         menuActive = int(input(": "))
     elif(subMenuActive == 0):
         subMenuActive = int(input(": "))#int(input(menuListActive[int(menuActive)][int(subMenuActive)]))
-        
+    elif(subMenuActive != 0):
+        subMenu_Selection = int(input(": "))#int(input(menuListActive[int(menuActive)][int(subMenuActive)]))
+         if(subMenu_Selection == int(input(menuListActive[int(menuActive)][int(subMenuActive)]))+1):
+            subMenuActive = 0
