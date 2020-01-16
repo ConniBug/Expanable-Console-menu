@@ -1,8 +1,19 @@
 
+#Offset values
 Title = 0
 Version = 1
+BuildType_Offset = 2
+#-------------
+
+#Config values
 TitleText = "Testing"
-info = [TitleText, "V0.0.0.1"]
+VersionText = "V0.2.3.2"
+BuildType_Text = "Dev"
+#-------------
+
+info = [TitleText, VersionText, BuildType_Text]
+
+
 def ScaleTextSides(Text, spaceChar, width, side):
    #print(Text)
     #//print(spaceChar)
@@ -26,6 +37,7 @@ def header():
 
 def displayMenu(menu):
     header()    
+      
 running = True
 menuActive = 0
 subMenuActive = 0;
