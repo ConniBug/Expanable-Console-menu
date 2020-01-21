@@ -10,7 +10,7 @@ BuildType_Offset = 2
 
 #Config values
 TitleText = "Testing"
-VersionText = "V0.4.2.0"
+VersionText = "V0.4.2.5"
 BuildType_Text = "Dev"
 #-------------
 
