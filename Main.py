@@ -46,7 +46,7 @@ def displayMenu(menu):
     header()    
       
 running = True
-menuActive = 0
+menuActive = -1
 subMenuActive = -1;
 
 def menu(Title, Body, Date):
@@ -62,8 +62,8 @@ while running:
     card1Option1 = ["Title", "body", "date"]
     card1Option2 = ["Title2", "body2", "date2"]
 
-    card1Loc = [ ["O"] + card1Option1]
-    card2Loc = [ ["O"] + card1Option2]#menu(card1Option1[0], card1Option1[1], card1Option1[2])]
+    card1Loc = ["O"] + card1Option1
+    card2Loc = ["O"] + card1Option2 #menu(card1Option1[0], card1Option1[1], card1Option1[2])]
     card1 = ["Card 1 Menu", "Body", card1Loc]#, card1Loc[0]]
     
     card2 = ["Card 2 Menu", "Body", card2Loc]
@@ -78,7 +78,7 @@ while running:
     if(menuListActive[ int(menuActive) ][int(subMenuActive)]):
        for e in range(0, int( subOptionCount)    ):
           # print("Test1: i: " + str(e))
-           if(menuActive != 0):
+           if(menuActive != -1):
                #for i in range(0, len(((menuListActive[int(menuActive)])  [int(subMenuActive)] ))):
                    #print("Test1: i: " + str(i))
                    #print("Yeet")   [[  len(menuListActive [int(menuActive)]   [int(postModsSub)   ]    )-1][0]]
@@ -94,10 +94,10 @@ while running:
 
 
     postModsSub = subMenuActive    
-    if(menuActive == 0):
-        menuActive = int(input(": "))
+    if(menuActive == -1):
+        menuActive = int(input("Menu: "))-1
     elif(subMenuActive == 0):
-        subMenuActive = int(input(": "))#int(input(menuListActive[int(menuActive)][int(subMenuActive)]))
+        subMenuActive = int(input( ": "))#int(input(menuListActive[int(menuActive)][int(subMenuActive)]))
     elif(subMenuActive != 0):
         subMenu_Selection = int(input(": "))#int(input(menuListActive[int(menuActive)][int(subMenuActive)]))
       #  if(subMenu_Selection == int(input("subMenu: ")+1)):
@@ -107,5 +107,5 @@ while running:
     currentActiveMenu = menuListActive[int(menuActive)]
     selectedSub = len(menuListActive [int(menuActive)]   [int(postModsSub)]    )-1
 
-    if(str(currentActiveMenu[int(postModsSub)]    [selectedSub] == "o")): #  [  subMenuActive * ( selectedSub-2 * 2)  ]) == "O"):
+    if(str(currentActiveMenu[int(postModsSub)]    [selectedSub][0] == "O")): #  [  subMenuActive * ( selectedSub-2 * 2)  ]) == "O"):
       print("Yetettetette")
